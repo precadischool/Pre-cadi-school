@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - PRE CADI SCHOOL</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #d9fdd3; /* Light green */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-box {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      width: 320px;
+      text-align: center;
+    }
+    .login-box img {
+      width: 100px;  /* Logo size */
+      height: auto;
+      margin-bottom: 15px;
+    }
+    .login-box h2 {
+      margin-bottom: 20px;
+      color: #2c662d;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background: #28a745;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #218838;
+    }
+    a {
+      display: block;
+      margin-top: 10px;
+      color: #2c662d;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="login-box">
+  <!-- School Logo -->
+  <img src="logo.png" alt="School Logo">
+
+  <h2>Login</h2>
+  <form>
+    <input type="text" placeholder="Username" required>
+    <input type="password" placeholder="Password" required>
+    <button type="submit">Login</button>
+  </form>
+  <a href="index.html">← Back to Home</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRE CADI SCHOOL</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('army.gif') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    header {
+      background: rgba(0,0,0,0.7);
+      padding: 15px;
+      text-align: center;
+    }
+    header img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+    header h1 {
+      margin: 10px 0 5px;
+      font-size: 30px;
+    }
+    header p { margin: 0; font-size: 14px; }
+    nav {
+      background: rgba(0,50,0,0.8);
+      text-align: center;
+      padding: 12px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    section {
+      background: rgba(0,0,0,0.6);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 900px;
+      border-radius: 10px;
+    }
+    h2 {
+      text-align: center;
+      border-bottom: 2px solid #28a745;
+      padding-bottom: 10px;
+    }
+
+    /* Gallery Style */
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .gallery-container img {
+      width: 100%;
+      border-radius: 12px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .gallery-container img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(255,255,255,0.5);
+    }
+
+    /* YouTube video player */
+    .video-player {
+      text-align: center;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border-radius: 10px;
+    }
+    .controls {
+      margin-top: 10px;
+    }
+    .btn {
+      background: #28a745;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #218838;
+    }
+
+    footer {
+      background: rgba(0,0,0,0.7);
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="School Logo">
+  <h1>PRE CADI SCHOOL</h1>
+  <p>Ward No.18, Mohalla Qadir Abad, Near Madni Masjid</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#video">Videos</a>
+  <a href="login.html">Login</a>
+</nav>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    <strong>PRE CADI SCHOOL</strong> stands as a symbol of excellence, discipline, and innovation in education.  
+    Our mission is to nurture young minds with knowledge, character, and confidence to shape a brighter future.  
+    We believe that true education goes beyond books — it builds values, creativity, and leadership.  
+    At PRE CADI SCHOOL, every child is encouraged to dream big, think deeply, and achieve greatness with hard work and honesty.  
+    We are not just a school — we are a community dedicated to inspiring lifelong learners and future leaders.
+  </p>
+</section>
+
+<section id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery-container">
+    <img src="img1.jpg" alt="School Image 1">
+    <img src="img2.jpg" alt="School Image 2">
+    <img src="img3.jpg" alt="School Image 3">
+    <img src="img4.jpg" alt="School Image 4">
+    <img src="img5.jpg" alt="School Image 5">
+    <img src="img6.jpg" alt="School Image 6">
+  </div>
+</section>
+
+<section id="video">
+  <h2>School Videos</h2>
+  <div class="video-player">
+    <iframe id="videoFrame" src="https://www.youtube.com/embed/HQVLKutdgUo" frameborder="0" allowfullscreen></iframe>
+    <div class="controls">
+      <button class="btn" onclick="prevVideo()">Previous</button>
+      <button class="btn" onclick="nextVideo()">Next</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 PRE CADI SCHOOL. All Rights Reserved.</p>
+</footer>
+
+<script>
+  const videos = [
+    "HQVLKutdgUo",
+    "ZZlHQs19mh8",
+    "VqXnVATmnBY",
+    "aMke63zFa78",
+    "Y8Rgkf3Dzb8"
+  ];
+  let current = 0;
+  const frame = document.getElementById("videoFrame");
+
+  function nextVideo() {
+    current = (current + 1) % videos.length;
+    frame.src = `https://www.youtube.com/embed/${videos[current]}`;
+  }
+
+  function prevVideo() {
+    current = (current - 1 + videos.length) % videos.length;
+    frame.src = `https://www.youtube.com/embed/${videos[current]}`;
+  }
+</script>
+
+</body>
+</html>
